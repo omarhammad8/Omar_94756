@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="دليل فعاليات الجامعة الافتراضية السورية: اكتشف الفعاليات الثقافية والرياضية والموسيقية والعائلية.">
+  <title>دليل فعاليات الجامعة الافتراضية | الرئيسية</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <!-- تطبيق الوضع المحفوظ قبل الرسم لتجنب وميض الألوان -->
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-bs-theme",JSON.parse(t));}catch(e){}</script>
+  <!-- Bootstrap 5 (نسخة RTL) + الأيقونات عبر CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- خطوط الويب: Cairo للعناوين والنصوص، Tajawal كبديل -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+
+  <!-- ========== Header: الشعار + قائمة التنقل ========== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-2" aria-label="القائمة الرئيسية">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="assets/img/logo.svg" alt="شعار دليل الفعاليات">
+          <span>دليل الفعاليات<span class="brand-sub">الجامعة الافتراضية السورية</span></span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <button class="btn btn-outline-secondary theme-toggle" type="button" aria-label="تبديل الوضع الليلي" title="الوضع الليلي"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="فتح القائمة">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto gap-lg-1 my-2 my-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html"><i class="bi bi-calendar3"></i> كل الفعاليات</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> عن الدليل</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> اتصل بنا</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- البطل -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge bg-light text-dark rounded-pill mb-3 px-3 py-2"><i class="bi bi-stars text-danger"></i> موسم الفعاليات 2026 / 2027</span>
+            <h1 class="mb-3">كل فعاليات الجامعة الافتراضية… في دليل واحد</h1>
+            <p class="lead mb-4">ندوات ثقافية، بطولات رياضية، أمسيات موسيقية وأنشطة عائلية في كل المحافظات وعبر الإنترنت. ابحث، احجز، وشارك.</p>
+            <form class="d-flex gap-2 mb-4" action="events.html" method="get" role="search">
+              <input class="form-control form-control-lg rounded-pill" type="search" name="q" placeholder="ابحث عن فعالية، مدينة أو تصنيف..." aria-label="بحث">
+              <button class="btn btn-light btn-lg rounded-pill px-4 fw-bold" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            <div class="hero-stats">
+              <div class="stat"><b id="statEvents">12</b>فعالية</div>
+              <div class="stat"><b id="statCities">5</b>مواقع</div>
+              <div class="stat"><b id="statCats">6</b>تصنيفات</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- فريق المشروع: الأسماء والأرقام الجامعية (مطلوب في الوظيفة) -->
+    <section class="team-strip" aria-labelledby="teamTitle">
+      <div class="container">
+        <div class="card p-3 p-md-4">
+          <h2 id="teamTitle" class="h6 fw-bold mb-3"><i class="bi bi-person-badge text-brand"></i> إعداد الطالب | مقرر BWP401</h2>
+          <div class="row g-2">
+              <div class="col-12 col-md-6 col-lg-4"><div class="member-chip"><img src="assets/img/team/member-1.svg" alt=""><div><div class="fw-bold">عمر الحماد</div><span class="id">Omar_94756</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- القسم 1: فعاليات بارزة هذا الأسبوع (سلايدر) -->
+    <section class="section" aria-labelledby="featuredTitle">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="featuredTitle">فعاليات بارزة هذا الأسبوع</h2>
+          <a href="events.html" class="btn btn-outline-primary rounded-pill btn-sm">عرض الكل <i class="bi bi-arrow-left"></i></a>
+        </div>
+        <div id="featuredCarousel" class="carousel slide featured-carousel" data-bs-ride="carousel">
+          <div class="carousel-indicators" id="featuredIndicators"></div>
+          <div class="carousel-inner" id="featuredSlides"></div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">السابق</span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">التالي</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- القسم 2: الحدث اليوم / القادم مع عدّاد -->
+    <section class="pb-2" aria-label="الحدث القادم">
+      <div class="container">
+        <div class="next-event reveal" id="nextEvent"></div>
+      </div>
+    </section>
+
+    <!-- القسم 3: تصنيفات سريعة -->
+    <section class="section" aria-labelledby="catsTitle">
+      <div class="container">
+        <div class="section-title"><h2 id="catsTitle">تصفّح حسب التصنيف</h2></div>
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <!-- القسم 4: أحدث الفعاليات -->
+    <section class="section pt-0" aria-labelledby="latestTitle">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="latestTitle">أحدث الفعاليات</h2>
+          <a href="events.html" class="btn btn-outline-primary rounded-pill btn-sm">كل الفعاليات <i class="bi bi-arrow-left"></i></a>
+        </div>
+        <div class="row g-4" id="latestGrid"></div>
+      </div>
+    </section>
+
+    <!-- دعوة للمشاركة -->
+    <section class="pb-4">
+      <div class="container">
+        <div class="p-4 p-md-5 rounded-4 text-white text-center reveal" style="background: linear-gradient(120deg, var(--brand-dark), var(--accent))">
+          <h2 class="h3">لديك فعالية تريد مشاركتها مع مجتمع الجامعة؟</h2>
+          <p class="mb-4 opacity-75">أرسل لنا تفاصيلها وسنراجعها وننشرها في الدليل خلال 3 أيام عمل.</p>
+          <a href="about.html#submit" class="btn btn-light rounded-pill px-4 fw-bold">اقترح فعالية</a>
+          <a href="contact.html" class="btn btn-outline-light rounded-pill px-4">تواصل معنا</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer: التواصل + روابط + حقوق النشر ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="d-flex align-items-center gap-2 mb-3 text-white fw-bold fs-5" href="index.html"><img src="assets/img/logo.svg" width="40" height="40" alt="">دليل الفعاليات</a>
+          <p class="small">منصة تجمع فعاليات الجامعة الافتراضية السورية الثقافية والرياضية والفنية في مكان واحد، ليبقى مجتمع الجامعة متصلاً أينما كان.</p>
+          <div class="social" aria-label="حسابات التواصل الاجتماعي">
+            <a href="#" aria-label="فيسبوك"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="إنستغرام"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="إكس"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="يوتيوب"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="تيليغرام"><i class="bi bi-telegram"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>روابط سريعة</h5>
+          <ul class="list-unstyled small d-grid gap-2">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="events.html">كل الفعاليات</a></li>
+            <li><a href="about.html">عن الدليل</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>التصنيفات</h5>
+          <ul class="list-unstyled small d-grid gap-2">
+            <li><a href="events.html?cat=culture">ثقافة</a></li>
+            <li><a href="events.html?cat=sports">رياضة</a></li>
+            <li><a href="events.html?cat=music">موسيقى</a></li>
+            <li><a href="events.html?cat=family">عائلي</a></li>
+            <li><a href="events.html?cat=tech">تقنية</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h5>تواصل معنا</h5>
+          <ul class="list-unstyled small d-grid gap-2">
+            <li><i class="bi bi-geo-alt ms-2"></i>دمشق، المزة، مبنى الجامعة الافتراضية السورية</li>
+            <li><i class="bi bi-envelope ms-2"></i><a href="mailto:events@svuonline.org" dir="ltr">events@svuonline.org</a></li>
+            <li><i class="bi bi-telephone ms-2"></i><span dir="ltr">+963 11 000 0000</span></li>
+            <li><i class="bi bi-clock ms-2"></i>الأحد - الخميس، 9:00 - 16:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© <span id="year">2026</span> دليل فعاليات الجامعة الافتراضية. جميع الحقوق محفوظة.</span>
+        <span>مشروع مقرر BWP401، إعداد: عمر الحماد (<span dir="ltr">Omar_94756</span>)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى (Bonus) -->
+  <button id="toTop" type="button" aria-label="العودة للأعلى"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Modal: حجز مكان في الفعالية (Bonus) -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="bookingTitle"><i class="bi bi-bookmark-check text-brand"></i> حجز مكان</h2>
+          <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <div class="p-3 rounded-3 mb-3" style="background: var(--bg)">
+            <div class="fw-bold" id="bookingEventTitle"></div>
+            <small class="text-muted-2" id="bookingEventMeta"></small>
+          </div>
+          <form id="bookingForm" novalidate>
+            <div class="mb-3">
+              <label for="bkName" class="form-label">الاسم الكامل</label>
+              <input type="text" class="form-control" id="bkName" required minlength="3">
+              <div class="invalid-feedback">يرجى إدخال اسمك (3 أحرف على الأقل).</div>
+            </div>
+            <div class="mb-3">
+              <label for="bkEmail" class="form-label">البريد الإلكتروني</label>
+              <input type="email" class="form-control" id="bkEmail" dir="ltr" required>
+              <div class="invalid-feedback">يرجى إدخال بريد إلكتروني صحيح.</div>
+            </div>
+            <div class="mb-1">
+              <label for="bkSeats" class="form-label">عدد المقاعد</label>
+              <select class="form-select" id="bkSeats" required>
+                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+              </select>
+            </div>
+          </form>
+          <div id="bookingAlert"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">إغلاق</button>
+          <button type="button" class="btn btn-gradient rounded-pill px-4" id="bookingSubmit">تأكيد الحجز</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
